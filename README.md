@@ -32,7 +32,7 @@ For each processed notebook, you'll receive:
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/notebook-converter.git
+git clone https://github.com/JuanLara18/notebook-converter.git
 cd notebook-converter
 ```
 
