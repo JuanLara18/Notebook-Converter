@@ -1,46 +1,62 @@
-# Convertir Notebooks a .py, outputs e imágenes con Streamlit
+# Notebook Converter Pro
 
-Este proyecto permite subir archivos `.ipynb` y extraer:
-1. Un archivo `.py` consolidado con todo el código de las celdas.
-2. Un archivo `outputs.txt` con la salida de texto de cada celda.
-3. Las imágenes generadas durante la ejecución de cada notebook en formato `.png`.
+Convert Jupyter Notebooks into organized Python packages with just a few clicks! 
 
-## Requisitos
+## 🌐 Live Application
 
-- [Python 3.7+](https://www.python.org/)
-- [Streamlit](https://streamlit.io/) (ver `requirements.txt`)
+Try it now at: [https://notebook-converter.streamlit.app/](https://notebook-converter.streamlit.app/)
 
-## Uso
+## ✨ Features
 
-1. Clona o descarga este repositorio.
-2. Instala las dependencias con:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Ejecuta la aplicación con:
-   ```bash
-   streamlit run app.py
-   ```
-   O bien, en Windows, haz doble clic en `run_app.bat`.
+- Convert multiple `.ipynb` files simultaneously
+- Extract code into clean Python scripts
+- Preserve cell outputs in organized text files
+- Save generated images from notebook execution
+- Get detailed statistics about your notebooks
+- Download everything in a structured ZIP package
 
-4. En el navegador, arrastra tus archivos `.ipynb`. El sistema creará una carpeta por cada archivo subido.
+## 📦 Output Structure
 
-## Estructura de salida
+For each processed notebook, you'll receive:
+- `<notebook_name>.py` - Consolidated Python code
+- `<notebook_name>_outputs.txt` - Cell outputs and execution results
+- `<notebook_name>_image_1.png`, etc. - Generated images (if any)
 
-Por cada archivo `.ipynb` subido, se creará una carpeta con el mismo nombre (sin extensión), y dentro:
-- `<nombre>.py`
-- `outputs.txt`
-- `image_1.png`, `image_2.png`, etc. (si hubo imágenes)
+## 🛠️ Local Development
 
-¡Disfruta!
+### Prerequisites
+- Python 3.7+
+- Streamlit
+
+### Installation
+
+1. Clone this repository:
+```bash
+git clone https://github.com/yourusername/notebook-converter.git
+cd notebook-converter
 ```
 
----
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-### Notas finales
+3. Run the application:
+```bash
+streamlit run app.py
+```
 
-- Este ejemplo asume que solo quieres **concatenar** todo el código en un único `.py`. Ten en cuenta que no se mantiene la separación por celdas ni se incluyen magic commands de IPython (como `%matplotlib inline`) de forma especial. Solo se copian literalmente.
-- Para los **outputs**, se toma la salida textual o imágenes base64 encontradas en los metadatos del notebook. Si hay otros tipos de output (HTML, JavaScript), se omiten o tendrás que personalizar la extracción.  
-- Asegúrate de tener los permisos de escritura en la carpeta donde corres la app.  
+## 📝 Notes
 
-¡Listo! Con este contenido ya tienes todo lo necesario para crear tu repositorio en GitHub y un `.bat` para que puedas correr tu aplicación de Streamlit desde tu Escritorio en Windows. ¡Éxito con tu proyecto!
+- The code extraction concatenates all cells into a single Python file
+- IPython magic commands (e.g., `%matplotlib inline`) are included as-is
+- HTML and JavaScript outputs from cells are not processed
+- All files are processed in-memory for the web version
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](link-to-issues).
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
